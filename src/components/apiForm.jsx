@@ -47,7 +47,7 @@ const FileInput = ({ setFileBase64 }) => {
             }
             reader.readAsDataURL(file)
         } else {
-            setFileBase64('') // Send empty string if no file selected
+            setFileBase64('') 
         }
     }
 
@@ -132,7 +132,7 @@ const ApiForm = () => {
         const formattedData = formatData(data, dataFormat)
 
         try {
-            const res = await fetch('http://localhost:4000/bfhl', {
+            const res = await fetch('https://bajaj-finserv-backend-task.onrender.com/bfhl', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
